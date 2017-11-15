@@ -19,7 +19,7 @@ client.on('message', message => {
   if (message.content === 'yEET') {
     message.channel.send('YEET <:HotBoi:378570952231092235>');
   }  
-  if (message.content === ('yeet'/i)) {
+  if (message.content === (/i'yeet'/i)) {
     message.channel.send('YEET <:HotBoi:378570952231092235>');
   }
 });
