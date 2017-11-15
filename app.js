@@ -20,7 +20,7 @@ client.on('message', message => {
     message.channel.send('YEET <:HotBoi:378570952231092235>');
 
   if (message.content.match(/sock/i)) {
-   bot.sendMessage(message, "SOCK DETECTED!");
+    message.channel.send('SOCK DETECTED!');
   }
 });
 
