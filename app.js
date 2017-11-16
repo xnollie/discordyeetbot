@@ -25,9 +25,6 @@ client.on('message', message => {
   if (message.content === 'YeeT') {
     message.channel.send('YEET <:MmmYea:378567213814382593>');
   }  
-  if (message.content === 'yeET', 'YEet', 'yEet', 'yeEt', 'yeeT', 'YEEt') {
-    message.channel.send('<:SlightlyNervousDoggo:378572850149457940>');
-  }  
 });
 
 client.login(process.env.BOT_TOKEN);
