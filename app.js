@@ -25,6 +25,24 @@ client.on('message', message => {
   if (message.content === 'YeeT') {
     message.channel.send('YEET <:MmmYea:378567213814382593>');
   }  
+  if (message.content === 'YEet') {
+    message.channel.send('YEET <:Berrypicker:377903953368711168>');
+  }    
+  if (message.content === 'YEEt') {
+    message.channel.send('YEET <:MeguFace:378570119414284298>');
+  }    
+  if (message.content === 'yeET') {
+    message.channel.send('YEET <:ahegao1:378565104310026240>');
+  }    
+  if (message.content === 'yeeT') {
+    message.channel.send('YEET <:SoGood:378564218154123264>');
+  }    
+  if (message.content === 'YeET') {
+    message.channel.send('YEET <:nicoLewd:378569162991206401>');
+  }    
+  if (message.content === 'YEeT') {
+    message.channel.send('YEET <:Franku:378569643335483392>');
+  }  
 });
 
 client.login(process.env.BOT_TOKEN);
