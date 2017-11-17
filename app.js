@@ -43,6 +43,12 @@ client.on('message', message => {
   if (message.content === 'YEeT') {
     message.channel.send('YEET <:Franku:378569643335483392>');
   }  
+  if (message.content === 'YeEt') {
+    message.channel.send('YEET <:FeelsTastyMan:378567810563178506>');
+  }  
+  if (message.content === 'yEeT') {
+    message.channel.send('YEET <:FeelsPepoMan:378568113328881685>');
+  }  
 });
 
 client.login(process.env.BOT_TOKEN);
