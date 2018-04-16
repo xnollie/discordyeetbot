@@ -38,7 +38,7 @@ client.on('message', message => {
     message.channel.send('YEET <:SoGood:378564218154123264>');
   }    
   if (message.content === 'YeET') {
-    message.channel.send('YEET <:nicoLewd:378569162991206401>');
+    message.channel.send('YEET <:YAMETE:378915090524798976>');
   }    
   if (message.content === 'YEeT') {
     message.channel.send('YEET <:Franku:378569643335483392>');
