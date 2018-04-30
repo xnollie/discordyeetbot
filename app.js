@@ -17,7 +17,7 @@ client.on('message', message => {
     message.channel.send('YEET <:lanDab:379330650559217666>');
   }
   if (message.content === 'yEET') {
-    message.channel.send('YEET <:HotBoi:378570952231092235>');
+    message.channel.send('YEET <:FeelCuteMan:378569384047673364>');
   }  
   if (message.content === 'yEEt') {
     message.channel.send('YEET <:YaGonLikeDis:378573605056937995>');
