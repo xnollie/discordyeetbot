@@ -14,8 +14,13 @@ var yoteResponses = ["Say yote again motherfucker I dare you ...", "Umm 'scuse m
   if(message.author.bot) return;
 
   // if message contains yeet drop a big yeet right back at em with a random emote
-  if(message.content.toLowerCase().match(/y[\s]*[e3][\s]*[e3]+[\s]*t/)){
-    message.channel.send("YEET "+message.guild.emojis.random());
+ if(message.content.toLowerCase().match(/y[\s]*[e3][\s]*[e3]+[\s]*t/)){
+    if(Math.floor(Math.random() * 1000000) === 373737){
+      message.channel.send("bitch");
+    }
+    else{
+      message.channel.send("YEET "+message.guild.emojis.random());
+    }
   }
 
   // if message contains yote drop a randomly selected reply from responses array
