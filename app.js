@@ -15,7 +15,7 @@ var yoteResponses = ["Say yote again motherfucker I dare you ...", "Umm 'scuse m
 
   // if message contains yeet drop a big yeet right back at em with a random emote
  if(message.content.toLowerCase().match(/y[\s]*[e3][\s]*[e3]+[\s]*t/)){
-    if(Math.floor(Math.random() * 1000000) === 373737){
+    if(Math.floor(Math.random() * 100000) === 373737){
       message.channel.send("bitch");
     }
     else{
@@ -28,15 +28,15 @@ var yoteResponses = ["Say yote again motherfucker I dare you ...", "Umm 'scuse m
       message.channel.send(yoteResponses[Math.floor(Math.random() * (yoteResponses.length -1))])
   }
 
-  // 1 in 1000 chance to ping user 
-  if(Math.floor(Math.random() * 1000) === 37){
+  // 1 in 10.000 chance to ping user 
+  if(Math.floor(Math.random() * 10000) === 37){
     message.channel.send("YEET! <@131883237583618050>"); // ping Matthias for ballbusting purposes
     //message.channel.send("YEET! <@283767301033951233>"); // ping Semanari for meme purposes
     //message.channel.send("YEET! <@88328049401040896>"); // ping Hailey for testing purposes
   }
 
-  // 1 in a million chance for a user to get uwu'd
-  if(Math.floor(Math.random() * 1000000) === 37){
+  // 1 in a 100.000 chance for a user to get uwu'd
+  if(Math.floor(Math.random() * 100000) === 37){
     message.channel.send(message.author.toString()+" uwu");
   }
 });
