@@ -29,7 +29,7 @@ var yoteResponses = ["Say yote again motherfucker I dare you ...", "Umm 'scuse m
   }
 
   // 1 in 10.000 chance to ping user 
-  if(Math.floor(Math.random() * 2) === 37){
+  if(Math.floor(Math.random() * 10) === 37){
     message.channel.send("YEET! <@131883237583618050>"); // ping Matthias for ballbusting purposes
     //message.channel.send("YEET! <@283767301033951233>"); // ping Semanari for meme purposes
     //message.channel.send("YEET! <@88328049401040896>"); // ping Hailey for testing purposes
