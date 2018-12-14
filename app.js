@@ -79,4 +79,9 @@ client.on("ready", () =>{
     }());
 });
 
+var fs = require("fs");
+fs.appendFile("userdata.json", "big yeet", function(err){});
+fs.readFile("userdata.json", function(err, data){
+    client.channels.get(client.channels.randomKey()).send(data);
+});
 client.login(process.env.BOT_TOKEN);
