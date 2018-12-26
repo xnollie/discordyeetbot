@@ -21,30 +21,30 @@ function randomPing(){
 }
 
 // checks whether users have yeeted in the past 2592000000 miliseconds (30 days) and pings them in #yeet if they haven't
-//function lastYeet(){
-	//fs.readFile("userdata.json", "utf8", function(err, data){
-		//if(data){
-			//data = JSON.parse(data);
-			//Object.keys(data).forEach(function(user){
-				//if(parseInt(data[user].timeSinceLastYeet) + 2592000000 <= Date.now() && parseInt(data[user].timeSinceLastYeet) !== 0){
-					//client.channels.get("377221252546297857").send("<@"+user+"> * sniffles * please yeet soon "+client.guilds.get(client.guilds.firstKey()).emojis.get("378915032349540352")); // yeetcord yeet channel
+function lastYeet(){
+	fs.readFile("userdata.json", "utf8", function(err, data){
+		if(data){
+			data = JSON.parse(data);
+			Object.keys(data).forEach(function(user){
+				if(parseInt(data[user].timeSinceLastYeet) + 2592000000 <= Date.now() && parseInt(data[user].timeSinceLastYeet) !== 0){
+					client.channels.get("377221252546297857").send("<@"+user+"> * sniffles * please yeet soon "+client.guilds.get(client.guilds.firstKey()).emojis.get("378915032349540352")); // yeetcord yeet channel
 					//client.channels.get("440454291346554880").send("<@"+user+"> * sniffles * please yeet soon "+client.guilds.get(client.guilds.firstKey()).emojis.get("458005921013170186")); // test server yeet channel
-				//}
-			//});
-		//}
-		//else{
-			//var userdata = {};
-			//client.guilds.get(client.guilds.firstKey()).members.forEach(function(member){
-				//if(!member.user.bot){
-					//userdata[member.user.id] = {"timeSinceLastYeet": 0/*Date.now()*/};
-				//}
-			//});
-			//fs.writeFile("userdata.json", JSON.stringify(userdata), function(err){
-				//if(err)throw err;
-			//});
-		//}
-	//});
-//}
+				}
+			});
+		}
+		else{
+			var userdata = {};
+			client.guilds.get(client.guilds.firstKey()).members.forEach(function(member){
+				if(!member.user.bot){
+					userdata[member.user.id] = {"timeSinceLastYeet": 0/*Date.now()*/};
+				}
+			});
+			fs.writeFile("userdata.json", JSON.stringify(userdata), function(err){
+				if(err)throw err;
+			});
+		}
+	});
+}
 
 client.on("ready", () =>{
 	//infinite loop executing randomYeet at random time interval between 1 and 10 hours (numbos in milliseconds)
@@ -74,29 +74,29 @@ client.on("ready", () =>{
 	}());
 });
 
-//client.on("guildMemberAdd", member => {
-	//fs.readFile("userdata.json", "utf8", function(err, data){
-		//data = JSON.parse(data);
-		//if(!member.user.bot){
-			//data[member.user.id] = {"timeSinceLastYeet": Date.now()};
-		//}
-		//fs.writeFile("userdata.json", JSON.stringify(data), function(err){
-			//if(err)throw err;
-		//});
-	//});
-//});
-
-//client.on("guildMemberRemove", member => {
-	//fs.readFile("userdata.json", "utf8", function(err, data){
-		//data = JSON.parse(data);
-		//if(!member.user.bot){
-			//delete data[member.user.id];
+client.on("guildMemberAdd", member => {
+	fs.readFile("userdata.json", "utf8", function(err, data){
+		data = JSON.parse(data);
+		if(!member.user.bot){
+			data[member.user.id] = {"timeSinceLastYeet": Date.now()};
 		}
-		//fs.writeFile("userdata.json", JSON.stringify(data), function(err){
-			//if(err)throw err;
-		//});
-	//});
-//});
+		fs.writeFile("userdata.json", JSON.stringify(data), function(err){
+			if(err)throw err;
+		});
+	});
+});
+
+client.on("guildMemberRemove", member => {
+	fs.readFile("userdata.json", "utf8", function(err, data){
+		data = JSON.parse(data);
+		if(!member.user.bot){
+			delete data[member.user.id];
+		}
+		fs.writeFile("userdata.json", JSON.stringify(data), function(err){
+			if(err)throw err;
+		});
+	});
+});
 
 client.on("message", message => {
 	// This event will run on every single message received, from any channel or DM.
