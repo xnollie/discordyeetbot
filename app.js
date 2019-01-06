@@ -130,7 +130,7 @@ client.on("message", message => {
 	}
 
 	// 1 in 100 chance to ping user
-	*if(Math.floor(Math.random() * 100) === 37){
+	/*if(Math.floor(Math.random() * 100) === 37){
 		message.channel.send("YEET! <@131883237583618050>"); // ping Matthias for ballbusting purposes
 		//message.channel.send("YEET! <@283767301033951233>"); // ping Semanari for meme purposes
 		//message.channel.send("YEET! <@88328049401040896>"); // ping Hailey for testing purposes
