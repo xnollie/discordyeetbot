@@ -58,7 +58,16 @@ client.on("message", message => {
     message.channel.send(message.author.toString()+" uwu");
   }
 });
- 
+
+    //infinite loop executing randomPing at random time interval between 1 and 7 days (numbos in milliseconds)
+    (function loopPing(){
+        var randomTime = Math.round(84000000 + Math.random() * 518400000);
+        setTimeout(function(){
+            randomPing();
+            loopPing();
+        }, randomTime);
+    }());
+}); 
 
 
 client.login(process.env.BOT_TOKEN);
