@@ -67,7 +67,7 @@ client.on("message", message => {
             loopPing();
         }, randomTime);
     }());
-}); 
+
 
 
 client.login(process.env.BOT_TOKEN);
