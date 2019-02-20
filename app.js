@@ -59,24 +59,7 @@ client.on("message", message => {
   }
 });
  
-client.on("ready", () =>{
-    //infinite loop executing randomYeet at random time interval between 1 and 10 hours (numbos in milliseconds)
-    (function loopYeet(){
-        var randomTime = Math.round(3600000 + Math.random() * 32400000);
-        setTimeout(function(){
-            randomYeet();
-            loopYeet();
-        }, randomTime);
-    }());
- 
-    //infinite loop executing randomPing at random time interval between 1 and 7 days (numbos in milliseconds)
-    (function loopPing(){
-        var randomTime = Math.round(84000000 + Math.random() * 518400000);
-        setTimeout(function(){
-            randomPing();
-            loopPing();
-        }, randomTime);
-    }());
+
 });
 
 
