@@ -5,7 +5,7 @@ client.on('ready',() => {
   console.log('I\'m Online');
 })
 
-var yoteResponses = ["Say yote again motherfucker I dare you ...", "<a:ANGRYAWOO:537664208863625272>", "<https://youtu.be/qFchpvKpYm0>", "Umm 'scuse me it's yeeted*", "The past tents of yeet is yeeted. Are you tupid or something?", "I shall yeet your yote and raise you a yeeted*"];
+var yoteResponses = ["Say yote again motherfucker I dare you ...", "Ok brainlet <:HYPERPEPEGA:532532835920379904>", "<a:ANGRYAWOO:537664208863625272>", "<https://youtu.be/qFchpvKpYm0>", "Umm 'scuse me it's yeeted*", "The past tents of yeet is yeeted. Are you tupid or something?", "I shall yeet your yote and raise you a yeeted*"];
  
 // yeets in random text channel
 function randomYeet(){
